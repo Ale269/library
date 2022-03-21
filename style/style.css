@@ -5,7 +5,19 @@
   margin: 0;
 }
 
-nav {
+body {
+  background-color: #F4F4F4;
+}
+
+body header {
+  padding: 30px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 5px 8px #CDCDCD;
+          box-shadow: 0 5px 8px #CDCDCD;
+  margin-bottom: 50px;
+}
+
+body header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,8 +28,135 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+body header nav button {
+  width: 50px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  height: 50px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+}
+
+body header nav h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+body .book-selector {
+  background-color: #FFFFFF;
   padding: 30px;
-  background-color: red;
-  height: 100px;
+  height: 500px;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 5px 8px #CDCDCD;
+          box-shadow: 0 5px 8px #CDCDCD;
+}
+
+body .book-selector form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .book-selector form button {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+body .book-selector form input {
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+body .book-selector form .checkbox-container {
+  width: 100%;
+  font-size: 1.2rem;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .book-selector form .checkbox-container label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .book-selector form .checkbox-container label::before {
+  content: '';
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+body .book-selector form .checkbox-container label:hover::before {
+  background-color: #04CBAD;
+}
+
+body .book-selector form .checkbox-container input:hover + label::before {
+  background-color: #04CBAD;
+}
+
+body .book-selector form .checkbox-container input {
+  width: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+body .book-selector form .checkbox-container input:checked + label::before {
+  background-color: #04CBAD;
+  content: '\002714';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */

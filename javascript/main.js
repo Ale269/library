@@ -2,12 +2,14 @@ const newBookBtn = document.getElementById("create-button");
 const nameInput = document.getElementById("book-name");
 const authorInput = document.getElementById("book-author");
 const pagesInput = document.getElementById("pages");
+const readItInput = document.getElementById("checkbox");
 let library = [];
 
 function Book() {
     this.name = nameInput.value;
     this.author = authorInput.value;
     this.pages = pagesInput.value;
+    this.readIt = readItInput.checked;
 }
 
 localStorage.clear();
