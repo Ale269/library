@@ -1,3 +1,4 @@
+const openBookForm = document.getElementById("open-book-selector");
 const newBookBtn = document.getElementById("create-button");
 const nameInput = document.getElementById("book-name");
 const authorInput = document.getElementById("book-author");
@@ -38,11 +39,14 @@ function displayLibrary() {
         const removeBtn = document.createElement("button");
 
         removeBtn.setAttribute("data-position", i);
+        removeBtn.setAttribute("class", "remove-btn");
         removeBtn.addEventListener("click", removeBook);
         readBtn.setAttribute("data-position", i);
         readBtn.addEventListener("click", toggleRead);
 
         card.setAttribute("class", "card-container");
+
+        author.setAttribute("class", "author");
 
         title.textContent = library[i].name;       
         author.textContent = library[i].author;
@@ -100,6 +104,9 @@ function toggleRead(event) {
     displayLibrary();
 }
 
+openBookForm.addEventListener("click", () => {
+    document.querySelector(".book-selector").classList.remove("hidden");
+});
 
 newBookBtn.addEventListener("click", setNewBook);
 displayLibrary();

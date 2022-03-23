@@ -2,10 +2,20 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 body {
     background-color: #F4F4F4;
+
+    input {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    button {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+    }
 
     header {
         padding: 30px;
@@ -39,8 +49,12 @@ body {
         }
     }
 
-
     .book-selector {
+        transform: translate(-50%, -50%) scale(1);
+        top: 50%;
+        left: 50%;
+        transition: ease-in-out 0.2s;
+        position: fixed;
         background-color: #FFFFFF;
         padding: 30px;
         height: 500px;
@@ -127,10 +141,15 @@ body {
         }
     }
 
+    .hidden {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
     .library-container {
         display: grid;
         grid-template-columns: repeat( auto-fill, minmax(250px, 1fr));
         gap:30px;
+        padding: 30px;
     }
 
     .card-container {
@@ -145,14 +164,42 @@ body {
         font-size: 1.4rem;
         font-weight: 500;
 
+        .author {
+            font-family: 'Dancing Script', cursive;
+        }
+
         button {
             padding: 20px;
             width: 100%;
             font-size: 1.4rem;
-            font-weight: 500;
             border: none;
             outline: none;
             border-radius: 20px;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: #04CBAD;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .active {
+            background-color: #04CBAD;
+        }
+
+        .inactive {
+            background-color: #CDCDCD;
+        }
+
+        .remove-btn {
+            background-color: #DF6946;
         }
     }
 

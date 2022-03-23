@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./style/style.css">
     
     <title>Document</title>
@@ -13,10 +17,10 @@
     <header>
         <nav>
             <h1>My Library</h1>
-            <button>+</button>
+            <button id="open-book-selector">+</button>
         </nav>
     </header>
-    <div class="book-selector">
+    <div class="book-selector hidden">
         <form>
             <input type="text" id="book-name" name="book-name" placeholder="name" required>
             <input type="text" id="book-author" name="book-author" placeholder="author" required>
