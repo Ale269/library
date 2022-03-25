@@ -4,6 +4,7 @@ const nameInput = document.getElementById("book-name");
 const authorInput = document.getElementById("book-author");
 const pagesInput = document.getElementById("pages");
 const readItInput = document.getElementById("checkbox");
+let overlayIsActive = false;
 let library = [];
 
 function Book() {
@@ -106,7 +107,25 @@ function toggleRead(event) {
 
 openBookForm.addEventListener("click", () => {
     document.querySelector(".book-selector").classList.remove("hidden");
+    document.querySelector("body").classList.add("block");
+    document.querySelector(".overlay").classList.add("block-overlay");
+
+    overlayIsActive = true;
 });
+
+document.querySelector(".overlay").addEventListener("click", (event) => {
+    if(overlayIsActive){
+        if(event.target = document.querySelector(".block-overlay")){
+            overlayIsActive = false;
+
+            document.querySelector(".book-selector").classList.add("hidden");
+            document.querySelector("body").classList.remove("block");
+            document.querySelector(".overlay").classList.remove("block-overlay");
+        }
+        
+        return;
+    }
+})
 
 newBookBtn.addEventListener("click", setNewBook);
 displayLibrary();
